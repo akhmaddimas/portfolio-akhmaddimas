@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Akhmad Dimas S — Portfolio</title>
+  <title>Portofolio Akhmad Dimas S</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -25,52 +25,83 @@
     <div>
       <h1>Hello, Saya Akhmad Dimas S</h1>
       <p>Desainer Grafis.</p>
-    <a href="#projects" class="btn hidden">Lihat Proyek</a>
-
-  </div>
-</section>
-  
+      <a href="#projects" class="btn hidden">Lihat Proyek</a>
+    </div>
+  </section>
 
   <!-- About Section -->
   <section id="about">
-    <h2>About Me</h2>
+    <h2>Tentang Saya</h2>
     <p>
-        saya adalah Dimas, saya adalah desainer grafis yang tinggal di Rembang Indonesia. 
-        Saat ini saya bekerja sebagai pekerja lepas. Saya sangat menyukai desain grafis. 
-        Saya suka mempelajari hal - hal baru untuk terus mengeksplorasi dan mengembangkan diri, 
-        aik sebagai desainer maupun sebagai manusia.
+      Saya adalah Dimas, seorang desainer grafis yang tinggal di Rembang, Indonesia. 
+      Saat ini saya bekerja sebagai pekerja lepas dan sangat menyukai desain grafis. 
+      Saya senang mempelajari hal-hal baru untuk terus berkembang sebagai desainer maupun sebagai pribadi.
     </p>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Branding Design</h3>
-        <p>Modern logo and identity for a coffee shop.</p>
-      </div>
-      <div class="project-card">
-        <h3>UI/UX App</h3>
-        <p>Mobile app for productivity and time tracking.</p>
-      </div>
-      <!-- Tambahkan project lainnya di sini -->
+  <section id="folder-view">
+    <h2>Semua Kategori Desain</h2>
+    <div class="folder-gallery">
+  
+      <!-- Folder T-Shirt -->
+      <a href="tshirt.html" class="folder-card">
+        <div class="folder-icon">
+          <img src="images/tshirt/tshirt1.jpg" alt="Preview T-Shirt">
+        </div>
+        <span class="folder-label">T-Shirt</span>
+      </a>
+  
+      <!-- Folder Banner -->
+      <a href="banner.html" class="folder-card">
+        <div class="folder-icon">
+          <img src="images/banner/banner1.png" alt="Preview Banner">
+        </div>
+        <span class="folder-label">Banner</span>
+      </a>
+  
+      <!-- Folder Flyer -->
+      <a href="flyer.html" class="folder-card">
+        <div class="folder-icon">
+          <img src="images/flyer/flyer1.png" alt="Preview Flyer">
+        </div>
+        <span class="folder-label">Flyer</span>
+      </a>
+  
+      <!-- Folder Logo -->
+      <a href="logo.html" class="folder-card">
+        <div class="folder-icon">
+          <img src="images/logo/logo1.png" alt="Preview Logo">
+        </div>
+        <span class="folder-label">Logo</span>
+      </a>
+
+      <!-- Folder Id Card -->
+      <a href="idcard.html" class="folder-card">
+        <div class="folder-icon">
+          <img src="images/idcard/idcard (1).jpg" alt="Preview Id Card">
+        </div>
+        <span class="folder-label">IdCard</span>
+      </a>
+  
     </div>
   </section>
+  
 
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:akhmad.dimas@email.com">akhmad.dimas@email.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/username" target="_blank">@username</a></p>
+    <p>Email: <a href="mailto:akhmad.dimas@email.com">akhmaddimas1263@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/username" target="_blank">@diiimss20___</a></p>
   </section>
 
   <!-- Footer -->
   <footer>
-    &copy; 2025 Akhmad Dimas S. All rights reserved.
+    &copy; Akhmad Dimas S. All rights reserved.
   </footer>
+
+  <!-- Animasi scroll -->
   <script>
-    // Simple Scroll Reveal Animation
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if(entry.isIntersecting){
@@ -78,10 +109,10 @@
         }
       });
     });
-  
+
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach(el => observer.observe(el));
   </script>
-  
+
 </body>
 </html>

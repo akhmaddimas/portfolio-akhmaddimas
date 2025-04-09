@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Desain T-Shirt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="back-wrapper">
+    <a href="index.html" class="back-button fancy">← Kembali</a>
+  </div>
+
+  <section id="projects">
+    <h2>Semua Desain T-Shirt</h2>
+    <div class="project-gallery">
+      <!-- Loop desain 1 - 5 -->
+      <div class="project-card">
+        <img src="images/tshirt/tshirt1.jpg" alt="T-Shirt 1" onclick="showModal(this)">
+        <h3 style="color: #f5f5f5;">Desain 1</h3>
+      </div>
+      <div class="project-card">
+        <img src="images/tshirt/tshirt2.jpg" alt="T-Shirt 2" onclick="showModal(this)">
+        <h3 style="color: #ffffff;">Desain 2</h3>
+      </div>
+      <div class="project-card">
+        <img src="images/tshirt/tshirt3.png" alt="T-Shirt 3" onclick="showModal(this)">
+        <h3 style="color: #ffffff;">Desain 3</h3>
+      </div>
+      <div class="project-card">
+        <img src="images/tshirt/tshirt4.png" alt="T-Shirt 4" onclick="showModal(this)">
+        <h3 style="color: #ffffff;">Desain 4</h3>
+      </div>
+      <div class="project-card">
+        <img src="images/tshirt/tshirt5.jpg" alt="T-Shirt 5" onclick="showModal(this)">
+        <h3 style="color: #ffffff;">Desain 5</h3>
+      </div>
+    </div>
+  </section>
+<!-- Modal Preview -->
+<div id="modal" class="modal" onclick="hideModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+  </div>
+
+  <script>
+    function showModal(el) {
+      document.getElementById("modal").style.display = "flex";
+      document.getElementById("modal-img").src = el.src;
+    }
+    function hideModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+</body>
+</html>

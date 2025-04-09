@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Desain Flyer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="back-wrapper">
+    <a href="index.html" class="back-button fancy">← Kembali</a>
+  </div>
+
+  <section id="projects">
+    <h2>Semua Desain Flyer</h2>
+    <div class="project-gallery">
+      <div class="project-card">
+        <img src="images/flyer/flyer1.png" alt="flyer1" onclick="showModal(this)">
+        <h3 style="color: #ffffff;">Event HUT SMA N2 REMBANG</h3>
+      </div>
+      <div class="project-card">
+        <img src="images/flyer/flyer2.png" alt="flyer2" onclick="showModal(this)">
+        <h3 style="color: rgb(255, 255, 255);">Event Natuna</h3>
+      </div>
+      <div class="project-card">
+        <img src="images/flyer/flyer3.png" alt="flyer3" onclick="showModal(this)">
+        <h3 style="color: #ffffff;">Event Kemerdekaan Republik Indonesia</h3>
+      </div>
+      <div class="project-card">
+        <img src="images/flyer/flyer4.jpg" alt="flyer4" onclick="showModal(this)">
+        <h3 style="color: #ffffff;">Flyer Pray For Gunung Semeru</h3>
+      </div>
+      <div class="project-card">
+        <img src="images/flyer/flyer5.png" alt=flyer5" onclick="showModal(this)">
+        <h3 style="color: #ffffff;">Flyer Memperingati Kelahiran Pancasila</h3>
+      </div>
+    </div>
+  </section>
+  <!-- Modal Preview -->
+  <div id="modal" class="modal" onclick="hideModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+  </div>
+
+  <script>
+    function showModal(el) {
+      document.getElementById("modal").style.display = "flex";
+      document.getElementById("modal-img").src = el.src;
+    }
+    function hideModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
