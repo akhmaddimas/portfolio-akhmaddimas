@@ -8,11 +8,9 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #0f0f0f;
-  color: #00ffd4;
+  background-color: #ffffff;
+  color: #000000;
   line-height: 1.6;
-  margin: 0;
-  padding: 0;
 }
 
 /* Header */
@@ -21,20 +19,21 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
-  background-color: #0a0a0a;
+  background-color: #ffffff;
   position: sticky;
   top: 0;
   z-index: 999;
+  border-bottom: 1px solid #ccc;
 }
 
 .logo {
   font-size: 1.5em;
   font-weight: bold;
-  color: #ffffff;
+  color: #000000;
 }
 
 nav a {
-  color: #ffffff;
+  color: #000000;
   margin-left: 25px;
   text-decoration: none;
   font-weight: 500;
@@ -42,27 +41,27 @@ nav a {
 }
 
 nav a:hover {
-  color: #ffffff;
+  color: #007BFF;
 }
 
-/* --- Hero Section (diubah warna dan tata letak) --- */
+/* Hero Section */
 .hero {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 80px 20px;
   flex-wrap: wrap;
-  background-color: #111;
-  text-align: left;
+  background-color: #f9f9f9;
   gap: 40px;
 }
 
 .hero img {
   width: 240px;
   border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
+
 .hero img:hover {
   transform: scale(1.05);
 }
@@ -74,32 +73,31 @@ nav a:hover {
 .hero h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
-  color: #ffffff; /* sebelumnya #00ffd4 */
+  color: #000000;
 }
 
-
-/* Section Titles */
+/* Section */
 section {
   padding: 60px 40px;
+  background-color: #ffffff;
 }
 
 section h2 {
   font-size: 2em;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
 }
 
-/* About Paragraph */
 p {
   font-size: 16px;
-  color: #aaa;
+  color: #333333;
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
 }
 
-/* Project Section */
+/* Project Category */
 .project-category {
   display: flex;
   flex-wrap: wrap;
@@ -110,19 +108,19 @@ p {
 
 .category-card {
   text-decoration: none;
-  color: white;
+  color: #000000;
   width: 260px;
-  background-color: #1e1e1e;
+  background-color: #f1f1f1;
   border-radius: 12px;
   padding: 16px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   text-align: center;
   transition: 0.3s;
 }
 
 .category-card:hover {
   transform: scale(1.03);
-  background-color: #2a2a2a;
+  background-color: #e0e0e0;
 }
 
 .category-card img {
@@ -131,7 +129,7 @@ p {
   margin-bottom: 10px;
 }
 
-/* Project Gallery (logo.html, dst) */
+/* Project Gallery */
 .project-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -142,13 +140,13 @@ p {
 }
 
 .project-card {
-  background: #1e1e1e;
+  background: #f5f5f5;
   padding: 15px;
   border-radius: 12px;
   text-align: center;
-  color: #fff;
+  color: #000000;
   width: 250px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .project-card img {
@@ -157,13 +155,13 @@ p {
   margin-bottom: 10px;
 }
 
-/* Back Button */
+/* Tombol Back */
 .back-button {
   display: inline-block;
   margin: 20px auto;
   padding: 10px 18px;
-  background-color: #333;
-  color: white;
+  background-color: #dddddd;
+  color: #000000;
   text-decoration: none;
   border-radius: 8px;
   font-size: 14px;
@@ -171,8 +169,9 @@ p {
 }
 
 .back-button:hover {
-  background-color: #555;
+  background-color: #bbbbbb;
 }
+
 .back-wrapper {
   text-align: left;
   padding: 20px 40px 0;
@@ -180,28 +179,29 @@ p {
 
 .back-button.fancy {
   display: inline-block;
-  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
-  color: #fff;
+  background: linear-gradient(145deg, #eeeeee, #cccccc);
+  color: #000;
   padding: 12px 20px;
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
 .back-button.fancy:hover {
-  background: #ffffff;
-  color: #000;
+  background: #000000;
+  color: #ffffff;
   transform: translateY(-2px);
 }
 
 /* Contact Section */
 .contact a {
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
 }
+
 .contact a:hover {
   text-decoration: underline;
 }
@@ -210,8 +210,8 @@ p {
 footer {
   text-align: center;
   padding: 30px;
-  background-color: #000;
-  color: #888;
+  background-color: #f5f5f5;
+  color: #555;
   font-size: 0.9em;
 }
 
@@ -232,15 +232,16 @@ footer {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 24px;
-  background-color: #00ffd4;
-  color: #000;
+  background-color: #000000;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   border-radius: 8px;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
 .btn:hover {
-  background-color: #00c3a5;
+  background-color: #333333;
   transform: translateY(-3px);
 }
 
@@ -281,6 +282,8 @@ footer {
     font-size: 1em;
   }
 }
+
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -300,7 +303,7 @@ footer {
   max-width: 80%;
   max-height: 80%;
   border-radius: 10px;
-  box-shadow: 0 0 20px #00ffd4;
+  box-shadow: 0 0 20px #000;
   animation: fadeIn 0.3s ease-in-out;
 }
 
@@ -321,8 +324,9 @@ footer {
 }
 
 .close:hover {
-  color: #00ffd4;
+  color: #007BFF;
 }
+
 /* Folder View */
 .folder-gallery {
   display: flex;
@@ -338,17 +342,17 @@ footer {
   align-items: center;
   width: 160px;
   text-decoration: none;
-  color: #fff;
-  background-color: #1e1e1e;
+  color: #000;
+  background-color: #f1f1f1;
   border-radius: 12px;
   padding: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, background 0.3s;
 }
 
 .folder-card:hover {
   transform: scale(1.05);
-  background-color: #2a2a2a;
+  background-color: #e2e2e2;
 }
 
 .folder-icon {
@@ -368,12 +372,16 @@ footer {
   height: auto;
   border-radius: 6px;
   object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 .folder-label {
   margin-top: 12px;
   font-size: 16px;
   font-weight: 500;
-  color: #00ff88;
+  color: #000000;
+}
+
+html {
+  scroll-behavior: smooth;
 }
