@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Akhmad Dimas S</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="navbar">
+      <div class="logo">Akhmad Dimas S</div>
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger" id="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <<section class="hero">
+    <div class="hero-container">
+      <div class="hero-image animated-image">
+        <img src="images/profil/foto.jpg" alt="Foto Akhmad Dimas S" />
+      </div>
+      <div class="hero-text">
+        <h1 class="fade-up">Hello, Saya <br> Akhmad Dimas S</h1>
+        <p class="slide-in-text">Desainer Grafis.</p>
+      </div>      
+      </div>
+    </div>
+  </section>  
+
+  <!-- Script: Burger menu toggle -->
+  <script>
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav-links');
+
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('nav-active');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Akhmad Dimas S</title>
+  <link rel="stylesheet" href="css/about.css" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">Akhmad Dimas S</div>
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger" id="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section id="about" style="padding: 2rem; max-width: 800px; margin: auto; font-family: sans-serif; text-align: justify;">
+    <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 1.5rem; text-align: left;">About</h2>
+    <p style="margin-bottom: 2rem; line-height: 1.6;">
+      Saya adalah seorang profesional di bidang Desain Grafis dengan pengalaman lebih dari 2 tahun. Saya lulusan SMA Negeri 2 Rembang dan memiliki pengalaman kerja sebagai desainer di Perusahaan MonsterGraphic Labs, Art Print, Rupa Raya Indonesia. Saya memiliki pengalaman berorganisasi yang mendukung keterampilan komunikasi saya. Dengan latar belakang dan pengalaman saya, saya siap memberikan kontribusi optimal bagi perusahaan.
+    </p>
+  
+    <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; text-align: left;">Pengalaman Kerja</h3>
+  
+    <div style="margin-bottom: 2rem;">
+      <h4 style="font-weight: bold; margin-bottom: 0.25rem;">MonsterGraphic Labs</h4>
+      <p style="color: gray; font-size: 1rem; margin-bottom: 0.25rem;">2023 - 2024</p>
+      <p style="color: gray; font-size: 1rem; margin-bottom: 0.75rem;">Desain Grafis & Operator Produksi</p>
+      <ul style="margin-left: 1.5rem; list-style: disc; line-height: 1.6;">
+        <li>Membuat desain T-Shirt, Brosur, Banner, Flyer, Brand T-Shirt</li>
+        <li>Menciptakan desain yang informatif dan komunikatif yang bisa menyentuh audiens</li>
+        <li>Berorientasi pada target waktu dan dapat menganalisa desain dengan baik</li>
+      </ul>
+    </div>
+  
+    <div style="margin-bottom: 2rem;">
+      <h4 style="font-weight: bold; margin-bottom: 0.25rem;">ART PRINT</h4>
+      <p style="color: gray; font-size: 1rem; margin-bottom: 0.25rem;">Jul – Okt</p>
+      <p style="color: gray; font-size: 1rem; margin-bottom: 0.75rem;">Desainer</p>
+      <ul style="margin-left: 1.5rem; list-style: disc; line-height: 1.6;">
+        <li>Membuat desain seperti desain Brosur, Banner, Flyer</li>
+        <li>Mengoreksi dan memastikan file desain dari customer untuk siap dicetak</li>
+        <li>Berorientasi pada target waktu dan dapat menganalisa desain dengan baik</li>
+      </ul>
+    </div>
+  
+    <div style="margin-bottom: 2rem;">
+      <h4 style="font-weight: bold; margin-bottom: 0.25rem;">PT. Rupa Raya Indonesia</h4>
+      <p style="color: gray; font-size: 1rem; margin-bottom: 0.75rem;">Des 2024 – Jun 2025</p>
+      <ul style="margin-left: 1.5rem; list-style: disc; line-height: 1.6;">
+        <li>Belajar software 3D & desain Arsitektur</li>
+        <li>Belajar mindset atau pola pikir dunia bisnis</li>
+        <li>Membuat desain Arsitektur Eksterior maupun Interior pada perumahan di Jepang</li>
+        <li>Berorientasi pada target waktu dan dapat menganalisa desain dengan baik</li>
+      </ul>
+    </div>
+  
+    <section class="skills-section">
+        <h3 class="section-title">Skills</h3>
+      
+        <div class="skills-container">
+          <div class="skills-row marquee-right">
+            <ul class="skills-track">
+              <li>Corel Draw</li>
+              <li>Adobe Photoshop</li>
+              <li>Adobe Illustrator</li>
+              <li>Canva</li>
+              <li>Adobe Lightroom</li>
+              <li>Adobe Premier</li>
+              <!-- Duplikat -->
+              <li>Corel Draw</li>
+              <li>Adobe Photoshop</li>
+              <li>Adobe Illustrator</li>
+              <li>Canva</li>
+              <li>Adobe Lightroom</li>
+              <li>Adobe Premier</li>
+            </ul>
+          </div>
+      
+          <div class="skills-row marquee-left">
+            <ul class="skills-track">
+              <li>Capcut</li>
+              <li>Microsoft Office</li>
+              <li>Blender</li>
+              <li>D5</li>
+              <!-- Duplikat -->
+              <li>Capcut</li>
+              <li>Microsoft Office</li>
+              <li>Blender</li>
+              <li>D5</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+  <script>
+    // Animasi scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden-left, .hidden-right');
+    hiddenElements.forEach(el => observer.observe(el));
+
+    // Burger menu
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav-links');
+
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('nav-active');
+    });
+  </script>
+</body>
+</html>
