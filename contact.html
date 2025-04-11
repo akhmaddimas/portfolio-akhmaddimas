@@ -4,12 +4,108 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - Akhmad Dimas S</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Reset dan dasar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Navbar dengan logo */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #000;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a.active,
+    .nav-links li a:hover {
+      color: #007BFF;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 4rem 2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      margin-top: 3rem;
+    }
+
+    .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #222;
+    }
+
+    .contact p {
+      font-size: 1.1rem;
+      margin: 1rem 0;
+    }
+
+    .contact a {
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsif */
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .contact {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <nav>
-      <ul class="navbar">
+    <nav class="navbar">
+      <div class="logo">Akhmad Dimas S</div>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
