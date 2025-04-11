@@ -108,10 +108,11 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
   color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -126,8 +127,28 @@ body {
   border-bottom: 1px solid #eee;
 }
 
-.project-card h2 {
+.project-info {
   padding: 1rem;
+  text-align: center;
+}
+
+.project-info h2 {
   font-size: 1.25rem;
+  margin-bottom: 0.5rem;
   color: #333;
+}
+
+.project-info p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+  .project-info h2 {
+    font-size: 1.1rem;
+  }
+  .project-info p {
+    font-size: 0.9rem;
+  }
 }
