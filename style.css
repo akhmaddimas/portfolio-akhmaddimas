@@ -24,6 +24,7 @@ nav {
   list-style: none;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
@@ -49,17 +50,20 @@ main {
   padding: 3rem 1rem;
   max-width: 800px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
 .contact p {
-  font-size: 1rem;
-  margin: 0.8rem 0;
+  font-size: 1.1rem;
+  margin: 1rem 0;
   text-align: center;
 }
 
@@ -74,7 +78,7 @@ main {
 }
 
 /* Responsif */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: center;
@@ -83,5 +87,27 @@ main {
 
   main {
     padding: 2rem 1rem;
+  }
+
+  .contact h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact p {
+    font-size: 0.95rem;
+  }
+
+  .navbar {
+    gap: 0.8rem;
   }
 }
