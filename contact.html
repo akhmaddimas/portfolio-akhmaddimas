@@ -4,108 +4,92 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - Akhmad Dimas S</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
   <style>
-    /* Reset dan dasar */
-    * {
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #000;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-
-    /* Navbar dengan logo */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    header {
       padding: 1rem 2rem;
-      background-color: #fff;
-      border-bottom: 1px solid #ddd;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      border-bottom: 1px solid #eee;
     }
 
-    .logo {
-      font-weight: bold;
-      font-size: 1.2rem;
+    nav ul.navbar {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul.navbar li a {
+      text-decoration: none;
       color: #000;
     }
 
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 1.5rem;
+    nav ul.navbar li a.active {
+      font-weight: bold;
+      border-bottom: 2px solid black;
     }
 
-    .nav-links li a {
-      text-decoration: none;
-      color: #333;
-      transition: color 0.3s;
-    }
-
-    .nav-links li a.active,
-    .nav-links li a:hover {
-      color: #007BFF;
-    }
-
-    /* Contact Section */
-    .contact {
-      padding: 4rem 2rem;
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: center;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      margin-top: 3rem;
+    main {
+      padding: 2rem;
     }
 
     .contact h2 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin-bottom: 1.5rem;
-      color: #222;
     }
 
-    .contact p {
-      font-size: 1.1rem;
-      margin: 1rem 0;
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
     }
 
-    .contact a {
-      color: #007BFF;
+    .social-item {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      background-color: #fafafa;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .social-item i {
+      font-size: 1.2rem;
+      margin-right: 8px;
+      color: #000;
+    }
+
+    .social-item a {
+      color: #000;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
     }
 
-    .contact a:hover {
-      text-decoration: underline;
-    }
-
-    /* Responsif */
-    @media (max-width: 768px) {
-      .nav-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-      }
-
-      .contact {
-        padding: 2rem 1.5rem;
-      }
+    footer {
+      text-align: center;
+      padding: 2rem 0 1rem;
+      font-size: 0.85rem;
+      color: #555;
     }
   </style>
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <div class="logo">Akhmad Dimas S</div>
-      <ul class="nav-links">
+    <nav>
+      <ul class="navbar">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -116,10 +100,38 @@
 
   <main>
     <section class="contact">
-      <h2>Hubungi Saya</h2>
-      <p>Email: <a href="mailto:akhmaddimas1263@gmail.com">akhmaddimas1263@gmail.com</a></p>
-      <p>Instagram: <a href="https://instagram.com/diiimss20___" target="_blank">@diiimss20___</a></p>
+      <h2>Social Media</h2>
+      <div class="social-grid">
+        <div class="social-item">
+          <strong>Instagram</strong>
+          <a href="https://instagram.com/diiimss20___" target="_blank">
+            <i class="fab fa-instagram"></i> @diiimss20___
+          </a>
+        </div>
+        <div class="social-item">
+          <strong>TikTok</strong>
+          <a href="https://www.tiktok.com/@userkamu" target="_blank">
+            <i class="fab fa-tiktok"></i> @diimass12
+          </a>
+        </div>
+        <div class="social-item">
+          <strong>Linkedin</strong>
+          <a href="https://linkedin.com/in/namamu" target="_blank">
+            <i class="fab fa-linkedin"></i> Akhmad Dimas
+          </a>
+        </div>
+        <div class="social-item">
+          <strong>Email</strong>
+          <a href="mailto:akhmaddimas1263@gmail.com">
+            <i class="fas fa-envelope"></i> akhmaddimas1263@gmail.com
+          </a>
+        </div>
+      </div>
     </section>
   </main>
+
+  <footer>
+    ©2024 - Akhmad Dimas S
+  </footer>
 </body>
 </html>
