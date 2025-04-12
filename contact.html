@@ -4,42 +4,68 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - Akhmad Dimas S</title>
-  <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #fff;
-      color: #000;
+    /* Reset dan body */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
+    body {
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      color: #000000;
+    }
+
+    /* Navbar */
     header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
       padding: 1rem 2rem;
-      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
 
-    nav ul.navbar {
+    .navbar {
       display: flex;
-      gap: 1rem;
-      list-style: none;
-      padding: 0;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    nav ul.navbar li a {
-      text-decoration: none;
-      color: #000;
-    }
-
-    nav ul.navbar li a.active {
+    .logo {
       font-weight: bold;
-      border-bottom: 2px solid black;
+      font-size: 1.2rem;
     }
 
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: black;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      color: #007bff;
+    }
+
+    /* Konten utama */
     main {
-      padding: 2rem;
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
     .contact h2 {
@@ -47,9 +73,10 @@
       margin-bottom: 1.5rem;
     }
 
+    /* Mengubah grid sosial media menjadi dua kolom dan dua baris */
     .social-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(2, 1fr); /* Dua kolom */
       gap: 1rem;
       margin-top: 1rem;
     }
@@ -87,9 +114,11 @@
   </style>
 </head>
 <body>
+  <!-- Header / Navbar -->
   <header>
-    <nav>
-      <ul class="navbar">
+    <nav class="navbar">
+      <div class="logo">Akhmad Dimas S</div>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -98,6 +127,7 @@
     </nav>
   </header>
 
+  <!-- Main Contact Section -->
   <main>
     <section class="contact">
       <h2>Social Media</h2>
@@ -115,7 +145,7 @@
           </a>
         </div>
         <div class="social-item">
-          <strong>Linkedin</strong>
+          <strong>LinkedIn</strong>
           <a href="https://linkedin.com/in/akhmad-dimas-791806340" target="_blank">
             <i class="fab fa-linkedin"></i> Akhmad Dimas
           </a>
@@ -130,6 +160,7 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     ©2024 - Akhmad Dimas S
   </footer>
