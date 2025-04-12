@@ -172,25 +172,14 @@ body {
 .skills-row {
   width: 100%;
   overflow: hidden;
-  white-space: nowrap;
   position: relative;
 }
 
 .skills-track {
-  display: inline-flex;
-  animation: scroll-left 15s linear infinite;
-  gap: 1rem;
-  list-style: none;
-  padding-left: 0;
+  display: flex;
+  gap: 2rem;
+  animation: scroll-marquee 15s linear infinite;
   will-change: transform;
-}
-
-.marquee-right .skills-track {
-  animation: scroll-left 15s linear infinite;
-}
-
-.marquee-left .skills-track {
-  animation: scroll-right 15s linear infinite;
 }
 
 .skills-track li {
@@ -201,22 +190,14 @@ body {
   font-size: 1rem;
   color: #333;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
 }
 
-@keyframes scroll-left {
+@keyframes scroll-marquee {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-50%);
-  }
-}
-
-@keyframes scroll-right {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
   }
 }
