@@ -75,5 +75,26 @@
       });
     });
   </script>
+  <!-- Script: Navbar dan Animasi -->
+  <script>
+    // Navbar loader
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+      });
+
+    // Burger menu (pastikan elemen ada di navbar.html)
+    window.addEventListener('DOMContentLoaded', () => {
+      const burger = document.getElementById('burger');
+      const nav = document.getElementById('nav-links');
+
+      if (burger && nav) {
+        burger.addEventListener('click', () => {
+          nav.classList.toggle('nav-active');
+        });
+      }
+    });
+  </script>
 </body>
 </html>
