@@ -49,31 +49,7 @@
 
     /* ===== Responsive Styling ===== */
     /* For small devices (mobile phones) */
-    @media (max-width: 480px) {
-      .menu-toggle {
-        display: block; /* Show hamburger icon */
-      }
-
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        width: 160px; /* Slightly bigger menu for very small screens */
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-    }
-
-    /* For medium devices (small tablets, larger phones) */
-    @media (min-width: 481px) and (max-width: 767px) {
+    @media (max-width: 600px) {
       .menu-toggle {
         display: block; /* Show hamburger icon */
       }
@@ -96,8 +72,32 @@
       }
     }
 
+    /* For medium devices (small tablets, larger phones) */
+    @media (min-width: 601px) and (max-width: 1024px) {
+      .menu-toggle {
+        display: block; /* Show hamburger icon */
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+    }
+
     /* For larger devices (tablets, desktops) */
-    @media (min-width: 768px) {
+    @media (min-width: 1025px) {
       .menu-toggle {
         display: none; /* Hide hamburger icon */
       }
