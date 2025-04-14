@@ -9,6 +9,50 @@ body {
   font-family: sans-serif;
   background-color: #f9f9f9;
 }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #007BFF;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
 /* Hero Section */
 .hero {
   padding: 4rem 2rem;
@@ -177,4 +221,4 @@ body {
   100% {
     transform: translateX(0%);
   }
-}
+}s
