@@ -3,166 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - Akhmad Dimas S</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <style>
-    /* Reset dan body */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: sans-serif;
-      background-color: #f9f9f9;
-      color: #000000;
-    }
-
-    /* Navbar */
-    header {
-      background-color: #ffffff;
-      border-bottom: 1px solid #ddd;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .logo {
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 2rem;
-    }
-
-    .nav-links li a {
-      text-decoration: none;
-      color: black;
-      font-size: 1rem;
-      transition: 0.3s;
-    }
-
-    .nav-links li a:hover,
-    .nav-links li a.active {
-      color: #007bff;
-    }
-
-    /* Konten utama */
-    main {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .contact h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    /* Mengubah grid sosial media menjadi dua kolom dan dua baris */
-    .social-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Dua kolom */
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .social-item {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 1rem;
-      background-color: #fafafa;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .social-item i {
-      font-size: 1.2rem;
-      margin-right: 8px;
-      color: #000;
-    }
-
-    .social-item a {
-      color: #000;
-      text-decoration: none;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 0 1rem;
-      font-size: 0.85rem;
-      color: #555;
-    }
-  </style>
+  <title>Akhmad Dimas S</title>
+  <link rel="stylesheet" href="home.css" />
 </head>
 <body>
-  <!-- Header / Navbar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Akhmad Dimas S</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Navbar akan dimuat dari file terpisah -->
+  <div id="navbar-placeholder"></div>
 
-  <!-- Main Contact Section -->
-  <main>
-    <section class="contact">
-      <h2>Social Media</h2>
-      <div class="social-grid">
-        <div class="social-item">
-          <strong>Instagram</strong>
-          <a href="https://instagram.com/diiimss20___" target="_blank">
-            <i class="fab fa-instagram"></i> @diiimss20___
-          </a>
-        </div>
-        <div class="social-item">
-          <strong>TikTok</strong>
-          <a href="https://www.tiktok.com/@dimasss126" target="_blank">
-            <i class="fab fa-tiktok"></i> @dimasss126
-          </a>
-        </div>
-        <div class="social-item">
-          <strong>LinkedIn</strong>
-          <a href="https://linkedin.com/in/akhmad-dimas-791806340" target="_blank">
-            <i class="fab fa-linkedin"></i> Akhmad Dimas
-          </a>
-        </div>
-        <div class="social-item">
-          <strong>Email</strong>
-          <a href="mailto:akhmaddimas1263@gmail.com">
-            <i class="fas fa-envelope"></i> akhmaddimas1263@gmail.com
-          </a>
-        </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-image animated-image">
+        <img src="images/profil/foto.jpg" alt="Foto Akhmad Dimas S" />
       </div>
-    </section>
-  </main>
+      <div class="hero-text">
+        <h1 class="fade-up">Hello, Saya <br> Akhmad Dimas S</h1>
+        <p class="slide-in-text">Desainer Grafis.</p>
+      </div>      
+    </div>
+  </section>  
 
-  <!-- Footer -->
-  <footer>
-    ©2024 - Akhmad Dimas S
-  </footer>
+  <!-- Script untuk load navbar -->
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+      });
+  </script>
 </body>
 </html>
