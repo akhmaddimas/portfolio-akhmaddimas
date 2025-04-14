@@ -1,4 +1,4 @@
-/* General Reset & Base */
+/* Reset dan dasar */
 * {
   margin: 0;
   padding: 0;
@@ -8,46 +8,93 @@
 body {
   font-family: sans-serif;
   background-color: #f9f9f9;
-  line-height: 1.6;
-  color: #333;
+}
+/* Hero Section */
+.hero {
+  padding: 4rem 2rem;
 }
 
-/* Container About Section */
-#about {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-  text-align: justify;
+.hero-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
-#about h2 {
+.hero-image img {
+  max-width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.hero-text h1 {
   font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-  text-align: left;
-}
-
-#about h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
   margin-bottom: 1rem;
-  text-align: left;
 }
 
-#about h4 {
-  font-weight: bold;
-  margin-bottom: 0.25rem;
-}
-
-#about p {
+.hero-text p {
   font-size: 1rem;
-  margin-bottom: 0.75rem;
   color: #555;
 }
 
-#about ul {
-  margin-left: 1.5rem;
-  list-style: disc;
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+    background-color: white;
+    width: 200px;
+    display: none;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.nav-active {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Animasi */
+.animated-image {
+  animation: fadeZoomIn 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.slide-in-text {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 0.8s;
+}
+
+@keyframes slideLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Skills Section */
@@ -114,7 +161,6 @@ body {
   margin-right: 0.5rem;
 }
 
-/* Animasi Scroll */
 @keyframes scroll-left {
   0% {
     transform: translateX(0%);
@@ -130,22 +176,5 @@ body {
   }
   100% {
     transform: translateX(0%);
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  #about {
-    padding: 1rem;
-  }
-
-  .skills-track li {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.8rem;
-  }
-
-  .skill-icon {
-    width: 20px;
-    height: 20px;
   }
 }
