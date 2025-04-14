@@ -47,8 +47,13 @@
       cursor: pointer;
     }
 
-    /* ===== Responsive Styling for Mobile ===== */
-    @media (max-width: 768px) {
+    /* ===== Responsive Styling ===== */
+    /* For small devices (mobile phones) */
+    @media (max-width: 480px) {
+      .menu-toggle {
+        display: block; /* Show hamburger icon */
+      }
+
       .nav-links {
         display: none;
         flex-direction: column;
@@ -56,7 +61,7 @@
         position: absolute;
         top: 60px;
         right: 20px;
-        width: 150px;
+        width: 160px; /* Slightly bigger menu for very small screens */
         padding: 10px;
         border-radius: 8px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.3);
@@ -65,9 +70,41 @@
       .nav-links.active {
         display: flex;
       }
+    }
 
+    /* For medium devices (small tablets, larger phones) */
+    @media (min-width: 481px) and (max-width: 767px) {
       .menu-toggle {
-        display: block;
+        display: block; /* Show hamburger icon */
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 180px;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+    }
+
+    /* For larger devices (tablets, desktops) */
+    @media (min-width: 768px) {
+      .menu-toggle {
+        display: none; /* Hide hamburger icon */
+      }
+
+      .nav-links {
+        display: flex; /* Always show menu links */
+        flex-direction: row;
       }
     }
   </style>
@@ -95,8 +132,8 @@
       const navLinks = document.getElementById('nav-links');
 
       if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', () => {
-          navLinks.classList.toggle('active');
+        menuToggle.addEventListener('click', function () {
+          navLinks.classList.toggle('active'); // Menambahkan/menanggalkan kelas active untuk menunjukkan/hide menu
         });
       } else {
         console.warn('Element menu-toggle atau nav-links tidak ditemukan!');
