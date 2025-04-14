@@ -1,16 +1,22 @@
 fetch("navbar.html")
   .then(res => res.text())
   .then(data => {
-    document.getElementById("navbar-placeholder").innerHTML = data;
+    const navbarPlaceholder = document.getElementById("navbar-placeholder");
+    navbarPlaceholder.innerHTML = data;
 
-    // Tunggu elemen burger & nav selesai dimuat sebelum dipasang event
-    const burger = document.getElementById('burger');
-    const nav = document.getElementById('nav-links');
+    // Tunggu DOM elemen di dalam navbar dimuat
+    requestAnimationFrame(() => {
+      const burger = document.getElementById('burger');
+      const nav = document.getElementById('nav-links');
 
-    if (burger && nav) {
-      burger.addEventListener('click', () => {
-        nav.classList.toggle('nav-active');
-        burger.classList.toggle('toggle'); // Untuk animasi burger jadi X
-      });
-    }
+      if (burger && nav) {
+        burger.addEventListener('click', () => {
+          nav.classList.toggle('nav-active');  // Tampilkan/sembunyikan menu
+          burger.classList.toggle('toggle');   // Animasi garis berubah jadi X
+        });
+      }
+    });
+  })
+  .catch(error => {
+    console.error("Gagal memuat navbar:", error);
   });
