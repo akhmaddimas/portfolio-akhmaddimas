@@ -1,22 +1,16 @@
-fetch("navbar.html")
-  .then(res => res.text())
-  .then(data => {
-    const navbarPlaceholder = document.getElementById("navbar-placeholder");
-    navbarPlaceholder.innerHTML = data;
+<!-- navbar.html -->
+<header class="navbar">
+  <div class="logo">Akhmad Dimas S</div>
+  <nav id="nav-links" class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-    // Tunggu DOM elemen di dalam navbar dimuat
-    requestAnimationFrame(() => {
-      const burger = document.getElementById('burger');
-      const nav = document.getElementById('nav-links');
-
-      if (burger && nav) {
-        burger.addEventListener('click', () => {
-          nav.classList.toggle('nav-active');  // Tampilkan/sembunyikan menu
-          burger.classList.toggle('toggle');   // Animasi garis berubah jadi X
-        });
-      }
-    });
-  })
-  .catch(error => {
-    console.error("Gagal memuat navbar:", error);
-  });
+  <div id="burger" class="burger">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </div>
+</header>
