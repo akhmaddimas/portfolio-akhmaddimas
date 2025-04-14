@@ -1,6 +1,12 @@
-const menuToggle = document.getElementById('menu-toggle');
-const navLinks = document.getElementById('nav-links');
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
 
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  } else {
+    console.warn('Element menu-toggle atau nav-links tidak ditemukan!');
+  }
 });
