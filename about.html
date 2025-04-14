@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="css/about.css" />
 </head>
 <body>
+    <!-- Navbar akan dimuat dari file terpisah -->
+    <div id="navbar-placeholder"></div>
   <section id="about" style="padding: 2rem; max-width: 800px; margin: auto; font-family: sans-serif; text-align: justify;">
     <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 1.5rem; text-align: left;">About</h2>
     <p style="margin-bottom: 2rem; line-height: 1.6;">
@@ -125,6 +127,13 @@
     burger.addEventListener('click', () => {
       nav.classList.toggle('nav-active');
     });
+  </script>
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+      });
   </script>
 </body>
 </html>
